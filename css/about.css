@@ -19,6 +19,8 @@
 
 .about .about-container .resume-container .content {
     padding: 0 30px;
+    max-height: 470px;
+    overflow-y: scroll;
     border-left: 2px solid var(--main-color);
 }
 
@@ -32,6 +34,10 @@
     border-radius: 0 6px 6px 6px;
 }
 
+.about .about-container .resume-container .content .box:last-child {
+    margin-bottom: 0px;
+}
+
 .about .about-container .resume-container .content .box:hover {
     box-shadow: 0 3px 12px 0 var(--shadow-color);
     border: 1px solid transparent;
@@ -40,11 +46,11 @@
 .about .about-container .resume-container .content .box::before {
     content: "";
     position: absolute;
-    right: calc(100% + 24px);
-    top: -2px;
-    width: 16px;
-    height: 16px;
-    border-radius: 50px;
+    right: calc(100% + 20px);
+    top: 50%;
+    width: 22px;
+    height: 22px;
+    transform: translateY(-50%) rotate(45deg);
     background-color: var(--main-color);
 }
 
@@ -63,7 +69,12 @@
 
 .about .about-container .resume-container .content .box p {
     color: #666;
-    font-size: 14px;
+    font-size: 16px;
+}
+
+.about .about-container .resume-container .content .box p a {
+    color: var(--text-color);
+    font-size: 15px;
 }
 
 @media screen and (max-width: 768px) {

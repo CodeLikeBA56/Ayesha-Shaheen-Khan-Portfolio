@@ -66,6 +66,13 @@ darkModeIcon.onclick = () => {
     document.body.classList.toggle('dark-mode');
 };
 
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.body.classList.add('dark-mode');
+    darkModeIcon.classList.add('bx-sun'); // icon for dark mode
+} else {
+    document.body.classList.remove('dark-mode');
+    darkModeIcon.classList.remove('bx-sun');
+}
 
 /*========== scroll reveal ==========*/
 ScrollReveal({

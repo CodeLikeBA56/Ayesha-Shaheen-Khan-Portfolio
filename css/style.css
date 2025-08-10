@@ -115,6 +115,7 @@ body {
 
 section {
     min-height: 100vh;
+    min-height: 100dvh;
     padding: 10rem 7% 2rem;
 }
 
